@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterLogin.master.cs" Inherits="Login_MasterLogin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+      <link href="../Content/bootstrap.css" rel="stylesheet" />
+        <script src="../Scripts/jquery-3.5.1.min.js"></script>
+        <script src="../Scripts/jquery-3.5.1.js"></script>
+        <script src="../Scripts/bootstrap.js"></script>
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #04a2aa;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+            li:last-child {
+                border-right: none;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #35aa04;
+                }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+      
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <ul>
+                <li><a class="active" href="#home">Home</a>
+                   
+                </li>
+                <li><a href="/login/Student_Registration.aspx">Registration</a></li>
+                <li><a href="../Admin/Change_PDF/changepdffile.aspx">Replace PDF</a></li>
+                <li><a href="/login/Dashbord.aspx">Dashboard</a></li>
+                <li style="float: right"><a href="/login/New_Login.aspx">Login</a></li>
+                <li><a href="EncrypDecryptLogin.aspx">Encrypt Login</a></li>
+                <li><a href="Encrypt_Login.aspx">Login register</a></li>
+                <li><a href="DecryptLogin.aspx">Encrypt Login1</a></li>
+                <li style="float:right"><a href="#"><b><span id="spnname" runat="server"></span></b></a></li>
+                <li style="float:right"><asp:ImageButton ID="ImageButton1" runat="server" Width="44px" ImageUrl="~/Login/logout.jpg" CausesValidation="false" /></li>
+            </ul>
+        </div>
+        
+
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
